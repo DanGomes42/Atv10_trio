@@ -7,7 +7,7 @@
 <body>
     <div id="conteudo">
         <a href="home.php">Aulas</a>
-        <a href="professor.php">Professores</a>
+        <a href="professor/home.php">Professores</a>
     </div>
 </body>
 </html>

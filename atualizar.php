@@ -15,16 +15,19 @@ if (isset($_GET['id'])) {
         $id = null;
     }
 }
+
+
 ?>
 
 
 <?php if ($id === null): ?>
-<h1>Aula invalido</h1>
+<h1>Aula inválida</h1>
 <?php else: ?>
 <h2>Atualizar Aula</h2>
 <a href="home.php">Voltar</a>
 
-<form method="POST" action="">
+<form method="POST" action="update.php">
+    <input type="hidden" name="id" value="<?= $aula["id"] ?>">
     Horário: <input type="float" name="horario" required value="<?= $aula["horario"] ?>"><br><br>
     Disciplina: <input type="text" name="disciplina" required value="<?= $aula["disciplina"] ?>"><br><br>
     Sala: <input type="number" name="sala" required value="<?= $aula["sala"] ?>"><br><br>

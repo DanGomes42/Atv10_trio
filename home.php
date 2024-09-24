@@ -22,7 +22,7 @@ if (isset($_POST['create'])) {
     $sql = "INSERT INTO aulas (horario, disciplina, sala, data_aula, atividades, observacoes, nome_professor) VALUES ('$horario', '$disciplina', '$sala', '$data_aula', '$atividades', '$observacoes', '$nome_professor')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Novo pedido adicionado com sucesso!";
+        echo "Nova aula adicionada com sucesso!";
     } else {
         echo "Erro: " . $sql . "<br>" . $conn->error;
     }

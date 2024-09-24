@@ -1,6 +1,6 @@
 <?php
 
-
+require_once "db.php";
 
 $id = $_POST['id'];
 $horario = $_POST['horario'];
@@ -15,6 +15,6 @@ $stmt = $conn->prepare("UPDATE aulas SET horario=?, disciplina=?, sala=?, data_a
 
 $stmt->execute([$horario, $disciplina, $sala, $data_aula, $atividades, $observacoes, $nome_professor, $id]);
 
-header('Location: read.php');
+header('Location: home.php');
 exit;
 
